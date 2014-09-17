@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="getSearchNameId" action="select">
+	<tables>
+		<table name="member" />
+	</tables>
+	<columns>
+		<column name="member_srl" />
+		<column name="user_id" />
+		<column name="user_name" />
+		<column name="nick_name" />
+	</columns>
+	<conditions>
+		<condition operation="like" column="user_id" var="s_user_id" />
+		<condition operation="like" column="user_name" var="s_user_name" pipe="or" />
+		<condition operation="like" column="nick_name" var="s_nick_name" pipe="or" />
+	</conditions>
+	<navigation>
+		<index var="sort_index" default="list_order" order="sort_order" />
+		<list_count var="list_count" default="20" />
+		<page_count var="page_count" default="10" />
+		<page var="page" default="1" />
+	</navigation>
+</query>

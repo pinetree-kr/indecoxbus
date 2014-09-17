@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="getBusList" action="select">
+    <tables>
+        <table name="cra_bus" />
+    </tables>
+    <columns>
+        <column name="*" />
+    </columns>
+</query>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset version="1.5.0">
+	<fields>
+		<field name="name" required="true" length="3:16" rule="userid"/>
+		<field name="max_volume" required="true" rule="number"/>
+	</fields>
+</ruleset>

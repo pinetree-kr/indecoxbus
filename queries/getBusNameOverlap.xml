@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="getBusNameOverlap" action="select">
+    <tables>
+        <table name="cra_bus" />
+    </tables>
+    <columns>
+        <column name="count(*)" alias="count"/>
+    </columns>
+    <conditions>
+    	<condition operation="equal" column="name" var="name"/>
+    </conditions>
+</query>

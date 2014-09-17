@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="deleteBus" action="delete">
+    <tables>
+        <table name="cra_bus" />
+    </tables>
+    <conditions>
+        <condition operation="equal" column="bus_srl" var="bus_srl" notnull="notnull" />
+    </conditions>
+</query>

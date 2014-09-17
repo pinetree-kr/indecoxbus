@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="updateBusState" action="update">
+	<tables>
+		<table name="cra_bus"/>
+	</tables>
+	<columns>
+		<column name="state" var="state" minlength="1" maxlength="1" notnull="notnull"/>
+		<column name="volume" var="volume" filter="number" notnull="notnull"/>
+		<column name="position" var="position" maxlength="60" default=""/>
+		<column name="regtime" var="regtime" default="curdate()"/>
+	</columns>
+	<conditions>
+		<condition operation="equal" column="name" var="name" notnull="notnull"/>
+	</conditions>
+</query>

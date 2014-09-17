@@ -1,0 +1,28 @@
+<load target="css/list.css"/>
+
+<h1>Indecoxbus Admin</h1>
+<p>현재 관리되고 있는 모든 버스들의 상태들을 나타냅니다.</p>
+<p>이 페이지는 <span>{date("Y-m-d H:i:s", time())}</span> 에 불려와진 페이지입니다. <span><a href="{getUrl('act', 'dispIndecoxbusAdminList')}">페이지 새로고침</a></span></p>
+<table>
+	<thead>
+		<tr>
+			<th>이름</th><th>BUS State</th><th>BUS Volume</th><th>Max</th><th>Position</th><th>최근 수정 타임</th><th>&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr cond="count($bus_list)==0">
+			<td colspan="1">등록된 버스가 없습니다. <a href="{getUrl('', 'module', 'admin', 'act', 'dispIndecoxbusAdminInsert')}">버스 추가</a> 로 버스를 추가시켜 주세요.</td>
+		</tr>
+		<tr loop="$bus_list=>$key,$val">
+			<td>{$val->name}</td>
+			<td>{$val->state}</td>
+			<td>{$val->volume}</td>
+			<td>{$val->max_volume}</td>
+			<td>{$val->position}</td>
+			<td>{zdate($val->regtime, 'Y-m-d H:i:s')}</td>
+			<td><span><a href="{getUrl('act', 'dispIndecoxbusAdminInsert', 'bus_srl', $val->bus_srl)}">수정</a></span> <span><a href="{getUrl('', 'act', 'procIndecoxbusAdminDelete', 'bus_srl', $val->bus_srl)}">삭제</a></span></td>
+		</tr>
+	</tbody>
+</table>
+<br/>
+<span><a href="{getUrl('', 'module', 'admin', 'act', 'dispIndecoxbusAdminInsert')}">버스 추가</a></span>

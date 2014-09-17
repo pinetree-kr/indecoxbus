@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="getBusByBusSrl" action="select">
+    <tables>
+        <table name="cra_bus" />
+    </tables>
+    <columns>
+        <column name="*" />
+    </columns>
+    <conditions>
+    	<condition operation="equal" column="bus_srl" var="bus_srl" notnull="notnull"/>
+    </conditions>
+</query>

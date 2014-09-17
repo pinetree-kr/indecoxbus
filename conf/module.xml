@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+	<grants />
+	<permissions />
+	<actions>
+		<action name="procIndecoxbusTest" type="controller" standalone="true"/>
+		<action name="getIndecoxbusTest" type="model" standalone="true"/>
+		
+		<action name="dispIndecoxbusAdminList" type="view" standalone="true" admin_index="true"/>
+		<action name="dispIndecoxbusAdminInsert" type="view" standalone="true"/>
+		
+		<action name="dispIndecoxAdminError" type="view" standalone="true"/>
+		
+		<action name="procIndecoxbusAdminInsert" type="controller" standalone="true" ruleset="insertBus"/>
+		<action name="procIndecoxbusAdminDelete" type="controller" standalone="true"/>
+		<action name="getIndecoxbusAdminCheckBusNameOverlap" type="model" standalone="true"/>
+		<action name="getIndecoxbusAdminSearchNameId" type="model" standalone="true"/>
+		
+		<action name="procIndecoxbusUpdateBusState" type="controller" standalone="true"/>
+		<action name="getIndecoxbusState" type="model" standalone="true"/>
+		<action name="getIndecoxbusStateList" type="model" standalone="true"/>
+	</actions>
+</module>

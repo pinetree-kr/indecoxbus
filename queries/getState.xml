@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="getState" action="select">
+	<tables>
+		<table name="cra_bus"/>
+	</tables>
+	<columns>
+		<column name="state" var="state"/>
+		<column name="volume" var="volume"/>
+		<column name="max_volume" var="max_volume"/>
+		<column name="position" var="position"/>
+		<column name="regtime" var="regtime"/>
+	</columns>
+	<conditions>
+		<condition operation="equal" column="name" var="name" notnull="notnull"/>
+	</conditions>
+</query>

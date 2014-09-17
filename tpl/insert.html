@@ -1,0 +1,46 @@
+<!--%import("js/insert.js")-->
+<!--%import("css/insert.css")-->
+
+<h1>Insert Bus</h1>
+<p>새로운 버스를 추가시킵니다.</p>
+
+<form id="cra_bus_insert" ruleset="insertBus" action="./" method="POST">
+	<input type="hidden" name="module" value="indecoxbus"/>
+	<input type="hidden" name="act" value="procIndecoxbusAdminInsert"/>
+	<input type="hidden" name="redirect_url" value="{getUrl('act','dispIndecoxbusAdminList')}" />
+	
+	<input type="hidden" name="bus_srl" value="{$bus_info->bus_srl}"/>
+	<table>
+		<tr>
+			<td>버스 이름</td>
+			<td><input type="text" name="name" value="{$bus_info->name}"/></td>
+			<td><span class="description"></span></td>
+		</tr>
+		<tr>
+			<td>버스 최대 수용 인원치</td>
+			<td><input type="text" name="max_volume" value="{$bus_info->max_volume}"/></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>연결 ID</td>
+			<td>
+				<input type="text" id="txt_member" value="{$member_info->nick_name}">
+				<input type="hidden" id="hidden_member_srl" name="member_srl" value="{$member_info->member_srl}"/>
+				<div class="drop_down_list">
+					<div id="member_sample" style="display:none">
+						<span>User ID:</span>&nbsp;<span class="user_id"></span>&nbsp;|&nbsp;
+						<span>User Name:</span>&nbsp;<span class="user_name"></span>&nbsp;|&nbsp;
+						<span>Nick Name:</span>&nbsp;<span class="nick_name"></span>
+						<input type="hidden" class="member_srl" value=""/>
+					</div>
+					<input type="hidden" class="dummy" value="dummy"/>
+				</div>
+			</td>
+			<td>이 아이디에 연결할 사용자를 선택해 주세요.</td>
+			
+		</tr>
+	</table>
+	
+	<input type="submit"/>
+	
+</form>

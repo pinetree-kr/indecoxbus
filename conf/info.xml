@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="0.2">
+	<title xml:lang="ko">Indecox Bus</title>
+
+	<description xml:lang="ko">Inter-device communication system by xml for xe and Handong Shuttle Bus</description>
+
+	<version>0.1</version>
+	<date>2012-04-02</date>
+	<category>member</category>
+
+	<author email_address="vanadate.kr@gmail.com" link="i7.handong.edu">
+		<name xml:lang="ko">pinetree</name>
+	</author>
+</module>

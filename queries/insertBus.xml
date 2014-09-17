@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="insertBus" action="insert">
+    <tables>
+        <table name="cra_bus" />
+    </tables>
+    <columns>
+        <column name="bus_srl" var="bus_srl" filter="number" notnull="notnull"/>
+        <column name="name" var="name" filter="userid" notnull="notnull"/>
+        <column name="member_srl" var="member_srl" filter="number" notnull="notnull"/>
+        <column name="state" var="state" default="A"/>
+        <column name="volume" var="volume" filter="number" default="0"/>
+        <column name="max_volume" var="max_volume" filter="number" notnull="notnull"/>
+        <column name="position" var="position" default=""/>
+        <column name="regtime" var="regtime" default="curdate()"/>
+    </columns>
+</query>
